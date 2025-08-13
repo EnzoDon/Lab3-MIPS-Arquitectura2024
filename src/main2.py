@@ -93,9 +93,7 @@ def connect_auto():
         ser.reset_output_buffer()
 
         # Reflejar selección en el combo (opcional, solo informativo)
-        ports_combobox['values'] = [selected_port]
-        ports_combobox.set(selected_port)
-
+        
         log_message(f"Connected to {selected_port} @ {baudrate.get()} bps")
     except Exception as e:
         messagebox.showerror("Connection", f"Error connecting to {selected_port}: {e}")
